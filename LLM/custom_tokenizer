@@ -1,0 +1,15 @@
+import tiktoken
+
+enc = tiktoken.encoding_for_model("gpt-4o")
+text = "hey there! I am Sahil Mali."
+encoded = enc.encode(text)
+print("Tokens:", encoded)
+
+#Tokens: [48467, 1354, 0, 357, 939, 50610, 311, 75008, 13]
+
+decoded = enc.decode([48467, 1354, 0, 357, 939, 50610, 311, 75008, 13])
+print("Decoded:", decoded)
+
+
+#in terminal:
+#pip install tiktoken
